@@ -221,11 +221,11 @@ $(function() {
 function update() {
 	$('#hostsummary').load('refresh_hosts.php');
 }
-function GetJsonFeed($json_url)
-        {
-            $feed = file_get_contents($json_url);
-          return json_decode($feed, true);
-       }
+//function GetJsonFeed($json_url)
+//        {
+//            $feed = file_get_contents($json_url);
+ //         return json_decode($feed, true);
+ //      }
 socket.onmessage = function(event) {
   json = JSON.parse(event.data);
   result.innerText = json.ticker.last.display;
