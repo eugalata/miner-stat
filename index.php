@@ -77,11 +77,11 @@ ddsmoothmenu.init({
     <h3><span style="color:#242424">
         <?php
              
-        function GetJsonFeed($json_url)
-        {
-            $feed = file_get_contents($json_url);
-            return json_decode($feed, true);
-        }
+        //function GetJsonFeed($json_url)
+        //{
+        //    $feed = file_get_contents($json_url);
+        //    return json_decode($feed, true);
+        //}
         $LTC_USD = GetJsonFeed("https://btc-e.com/api/2/ltc_usd/ticker");
         $LTC_USD_HIGH = $LTC_USD["ticker"]["high"];
         $LTC_USD_LOW = $LTC_USD["ticker"]["low"];
@@ -221,7 +221,11 @@ $(function() {
 function update() {
 	$('#hostsummary').load('refresh_hosts.php');
 }
-
+function GetJsonFeed($json_url)
+        {
+            $feed = file_get_contents($json_url);
+            return json_decode($feed, true);
+        }
 
 
 
