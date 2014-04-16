@@ -74,25 +74,25 @@ ddsmoothmenu.init({
     <div id="theticker" style="float:left;">
     <h3>BTC-E USD/BTC/LTC</h3>
     <h2><span style="color:#242424"></span></h2>
-    <h3><span style="color:#242424">
-        <?php
+   <h3><span style="color:#242424">
+        //<?php
              
         //function GetJsonFeed($json_url)
         //{
         //    $feed = file_get_contents($json_url);
         //    return json_decode($feed, true);
         //}
-        $LTC_USD = GetJsonFeed("https://btc-e.com/api/2/ltc_usd/ticker");
-        $LTC_USD_HIGH = $LTC_USD["ticker"]["high"];
-        $LTC_USD_LOW = $LTC_USD["ticker"]["low"];
-        $LTC_USD_AVG = $LTC_USD["ticker"]["avg"];
-        $LTC_USD_VOL = $LTC_USD["ticker"]["vol"];
-        $LTC_USD_VOL_CUR = $LTC_USD["ticker"]["vol_cur"];
-        $LTC_USD_LAST = $LTC_USD["ticker"]["last"];
-        $LTC_USD_BUY = $LTC_USD["ticker"]["buy"];
-        $LTC_USD_SELL = $LTC_USD["ticker"]["sell"];
+       // $LTC_USD = GetJsonFeed("https://btc-e.com/api/2/ltc_usd/ticker");
+        //$LTC_USD_HIGH = $LTC_USD["ticker"]["high"];
+       // $LTC_USD_LOW = $LTC_USD["ticker"]["low"];
+        //$LTC_USD_AVG = $LTC_USD["ticker"]["avg"];
+        //$LTC_USD_VOL = $LTC_USD["ticker"]["vol"];
+        //$LTC_USD_VOL_CUR = $LTC_USD["ticker"]["vol_cur"];
+        //$LTC_USD_LAST = $LTC_USD["ticker"]["last"];
+        //$LTC_USD_BUY = $LTC_USD["ticker"]["buy"];
+        //$LTC_USD_SELL = $LTC_USD["ticker"]["sell"];
 
-        echo "SELL:",$LTC_USD_SELL;
+        //echo "SELL:",$LTC_USD_SELL;
 
         ?>
     </span></h3>
