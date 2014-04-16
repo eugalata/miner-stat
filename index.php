@@ -120,7 +120,11 @@ ddsmoothmenu.init({
 	<div class="col_fw">
         <div id="theticker" style="float:left;">
         <h3>BTC-E USD/BTC/LTC</h3>
+<<<<<<< HEAD
         <h2><span style="color:#242424" </span><?php echo $BTC_USD_SELL; ?></h2></div>
+=======
+        <h2><span style="color:#242424" id="BTC_USD_SELL"></span></h2></div>
+>>>>>>> parent of 4f13361... btc-e price
 	<div id="thegauges">
 
 
