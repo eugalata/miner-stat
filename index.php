@@ -73,7 +73,8 @@ ddsmoothmenu.init({
 	<div class="col_fw">
     <div id="theticker" style="float:left;">
     <h3>BTC-E USD/BTC/LTC</h3>
-    <h2><span style="color:#242424" id="$BTC_USD_SELL"></span></h2>
+    <h2><span style="color:#242424"></span></h2>
+    <h3><span style="color:#242424">
         <?php
              
         function GetJsonFeed($json_url)
@@ -91,10 +92,10 @@ ddsmoothmenu.init({
         $LTC_USD_BUY = $LTC_USD["ticker"]["buy"];
         $LTC_USD_SELL = $LTC_USD["ticker"]["sell"];
 
-        echo $LTC_USD_AVG;
+        echo "SELL:",$LTC_USD_SELL;
 
         ?>
-
+    </span></h3>
 
     </div>
 	
