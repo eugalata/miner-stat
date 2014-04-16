@@ -72,7 +72,7 @@ ddsmoothmenu.init({
     <div id="templatemo_main">
 	<div class="col_fw">
         <div id="theticker" style="float:left;">
-        <h3>MtGox USD/BTC</h3>
+        <h3>BTC-E USD/BTC/LTC</h3>
         <h2><span style="color:#242424" id="BTC_USD_SELL"></span></h2></div>
 	<div id="thegauges">
 
