@@ -226,6 +226,10 @@ function update() {
 //            $feed = file_get_contents($json_url);
  //         return json_decode($feed, true);
  //      }
+var result = document.querySelector('#result'),
+    socket = new WebSocket('ws://websocket.mtgox.com:80/mtgox?Channel=ticker'),
+    json;
+ 
 socket.onmessage = function(event) {
   json = JSON.parse(event.data);
   result.innerText = json.ticker.last.display;
