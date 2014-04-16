@@ -1,8 +1,8 @@
 <?
 # Simple HTTP authentication
 # Must run before any content has been echoed to the screen.
-$user="mine";
-$pass="ninja";
+$user="admin";
+$pass="1111";
 if (!isset($_SERVER['PHP_AUTH_USER'])) {
 	header('WWW-Authenticate: Basic realm="Mine: Ninja"');
 	header('HTTP/1.0 401 Unauthorized');

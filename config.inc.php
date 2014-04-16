@@ -1,10 +1,10 @@
 <?php
 
-$dbdatabase = "anubis";
+$dbdatabase = "admin_mine";
 
 /* MYSQL specific defines */
-$dbusername = "anubis";
-$dbpassword = "example";
+$dbusername = "admin_mine";
+$dbpassword = "Google.com2012";
 $dbhost = "localhost";
 /* End MYSQL specific defines */
 
