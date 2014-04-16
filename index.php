@@ -123,7 +123,6 @@ ddsmoothmenu.init({
         <h2><span style="color:#242424" </span><?php echo $BTC_USD_SELL; ?></h2></div>
 	<div id="thegauges">
 
-echo $BTC_USD_SELL;
 
 <?php 
 $result = $dbh->query("SELECT SUM(mhash_desired) AS maxhash FROM hosts");
