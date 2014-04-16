@@ -79,7 +79,7 @@ ddsmoothmenu.init({
 <?php 
 $result = $dbh->query("SELECT SUM(mhash_desired) AS maxhash FROM hosts");
 $desmhash = $result->fetch(PDO::FETCH_ASSOC);
-$ghashmax = $desmhash['maxhash']/1000 * 1.1;
+$ghashmax = $desmhash['maxhash'] * 1.1;
 $ghash10 = intval($ghashmax * .1);
 $ghash20 = intval($ghashmax * .2);
 $ghash30 = intval($ghashmax * .3);
@@ -108,7 +108,7 @@ echo <<<END
                 data-major-ticks="$ticks"
                 data-minor-ticks="2"
                 data-stroke-ticks="true"
-                data-units="GH/s"
+                data-units="MH/s"
                 data-value-format="2.2"
                 data-glow="true"
                 data-animation-delay="10"
@@ -117,7 +117,7 @@ echo <<<END
                 data-colors-needle="#000 #f00"
                 data-highlights="$highlights"
                 data-value="800"
-                data-onready="setInterval( function() { Gauge.Collection.get('gauge1').setValue( parseInt(document.getElementById('Speed').innerHTML)/1000);}, 1000);"
+                data-onready="setInterval( function() { Gauge.Collection.get('gauge1').setValue( document.getElementById('Speed').innerHTML);}, 1000);"
                 data-colors-plate= "#242424"
                         data-colors-majorTicks= "#f5f5f5"
                         data-colors-minorTicks= "#ddd"
