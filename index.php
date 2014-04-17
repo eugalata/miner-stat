@@ -131,7 +131,7 @@ echo <<<END
                 data-animation-fn="bounce"
                 data-colors-needle="#000 #f00"
                 data-highlights="$highlights"
-                data-value="800"
+                data-value="0"
                 data-onready="setInterval( function() { Gauge.Collection.get('gauge1').setValue( document.getElementById('Speed').innerHTML);}, 1000);"
                 data-colors-plate= "#242424"
                         data-colors-majorTicks= "#f5f5f5"
