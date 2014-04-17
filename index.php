@@ -73,7 +73,7 @@ ddsmoothmenu.init({
 	<div class="col_fw">
         <div id="theticker" style="float:left;">
         <h3>MtGox USD/BTC</h3>
-        <h2><span style="color:#242424" id="result"></span></h2></div>
+        <h2><span style="color:#242424" id="result"></span>
 <?php
 $LTC_BTC = GetJsonFeed("https://btc-e.com/api/2/ltc_btc/ticker");
 $LTC_BTC_HIGH = $LTC_BTC["ticker"]["high"];
@@ -86,7 +86,7 @@ $LTC_BTC_BUY = $LTC_BTC["ticker"]["buy"];
 $LTC_BTC_SELL = $LTC_BTC["ticker"]["sell"];
 echo $LTC_BTC_AVG;
 ?>
-
+</h2></div>
 
 
 <div id="thegauges">
