@@ -74,7 +74,22 @@ ddsmoothmenu.init({
         <div id="theticker" style="float:left;">
         <h3>MtGox USD/BTC</h3>
         <h2><span style="color:#242424" id="result"></span></h2></div>
-	<div id="thegauges">
+<?php
+$LTC_BTC = GetJsonFeed("https://btc-e.com/api/2/ltc_btc/ticker");
+$LTC_BTC_HIGH = $LTC_BTC["ticker"]["high"];
+$LTC_BTC_LOW = $LTC_BTC["ticker"]["low"];
+$LTC_BTC_AVG = $LTC_BTC["ticker"]["avg"];
+$LTC_BTC_VOL = $LTC_BTC["ticker"]["vol"];
+$LTC_BTC_VOL_CUR = $LTC_BTC["ticker"]["vol_cur"];
+$LTC_BTC_LAST = $LTC_BTC["ticker"]["last"];
+$LTC_BTC_BUY = $LTC_BTC["ticker"]["buy"];
+$LTC_BTC_SELL = $LTC_BTC["ticker"]["sell"];
+echo $LTC_BTC_AVG;
+?>
+
+
+
+<div id="thegauges">
 
 <?php 
 $result = $dbh->query("SELECT SUM(mhash_desired) AS maxhash FROM hosts");
