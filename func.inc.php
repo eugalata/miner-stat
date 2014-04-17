@@ -1309,11 +1309,5 @@ function process_debug_info($host_data)
   return $output;
 }
 
-//function GetJsonFeed($json_url)
-//        {
-//            $feed = file_get_contents($json_url);
-//            return json_decode($feed, true);
- //       }
-
 ?>
 

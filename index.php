@@ -71,39 +71,11 @@ ddsmoothmenu.init({
     
     <div id="templatemo_main">
 	<div class="col_fw">
-    <div id="theticker" style="float:left;">
-    <h3>BTC-E USD/BTC/LTC</h3>
-    <h2><span style="color:#242424"></span></h2>
-   <h3><span style="color:#242424">
-        //<?php
-             
-        //function GetJsonFeed($json_url)
-        //{
-        //    $feed = file_get_contents($json_url);
-        //    return json_decode($feed, true);
-        //}
-       // $LTC_USD = GetJsonFeed("https://btc-e.com/api/2/ltc_usd/ticker");
-        //$LTC_USD_HIGH = $LTC_USD["ticker"]["high"];
-       // $LTC_USD_LOW = $LTC_USD["ticker"]["low"];
-        //$LTC_USD_AVG = $LTC_USD["ticker"]["avg"];
-        //$LTC_USD_VOL = $LTC_USD["ticker"]["vol"];
-        //$LTC_USD_VOL_CUR = $LTC_USD["ticker"]["vol_cur"];
-        //$LTC_USD_LAST = $LTC_USD["ticker"]["last"];
-        //$LTC_USD_BUY = $LTC_USD["ticker"]["buy"];
-        //$LTC_USD_SELL = $LTC_USD["ticker"]["sell"];
+        <div id="theticker" style="float:left;">
+        <h3>MtGox USD/BTC</h3>
+        <h2><span style="color:#242424" id="result"></span></h2></div>
+	<div id="thegauges">
 
-        //echo "SELL:",$LTC_USD_SELL;
-
-        ?>
-    </span></h3>
-
-    </div>
-	
-
-
-
-
-<div id="thegauges">
 <?php 
 $result = $dbh->query("SELECT SUM(mhash_desired) AS maxhash FROM hosts");
 $desmhash = $result->fetch(PDO::FETCH_ASSOC);
@@ -221,22 +193,14 @@ $(function() {
 function update() {
 	$('#hostsummary').load('refresh_hosts.php');
 }
-//function GetJsonFeed($json_url)
-//        {
-//            $feed = file_get_contents($json_url);
- //         return json_decode($feed, true);
- //      }
+
 var result = document.querySelector('#result'),
     socket = new WebSocket('ws://websocket.mtgox.com:80/mtgox?Channel=ticker'),
     json;
- 
+
 socket.onmessage = function(event) {
   json = JSON.parse(event.data);
   result.innerText = json.ticker.last.display;
-};
-
-
-
 };
 </script>
   
