@@ -72,7 +72,7 @@ ddsmoothmenu.init({
     <div id="templatemo_main">
 	<div class="col_fw">
         <div id="theticker" style="float:left;">
-        <h3>MtGox USD/BTC</h3>
+        <h3>BTC-E USD/LTC</h3>
         <h2><span style="color:#242424" id="result"></span>
 <?php
 $LTC_USD = GetJsonFeed("https://btc-e.com/api/2/ltc_usd/ticker");
@@ -209,13 +209,7 @@ function update() {
 	$('#hostsummary').load('refresh_hosts.php');
 }
 
-//var result = document.querySelector('#result'),
-//    socket = new WebSocket('ws://websocket.mtgox.com:80/mtgox?Channel=ticker'),
-//    json;
 
-socket.onmessage = function(event) {
-  json = JSON.parse(event.data);
-  result.innerText = json.ticker.last.display;
 };
 </script>
   
