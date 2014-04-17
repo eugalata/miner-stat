@@ -94,7 +94,7 @@ echo $LTC_USD_SELL;
 <?php 
 $result = $dbh->query("SELECT SUM(mhash_desired) AS maxhash FROM hosts");
 $desmhash = $result->fetch(PDO::FETCH_ASSOC);
-$ghashmax = $desmhash['maxhash'] * 1.1;
+$ghashmax = $desmhash['maxhash'] * 1.5;
 $ghash10 = intval($ghashmax * .1);
 $ghash20 = intval($ghashmax * .2);
 $ghash30 = intval($ghashmax * .3);
@@ -131,7 +131,7 @@ echo <<<END
                 data-animation-fn="bounce"
                 data-colors-needle="#000 #f00"
                 data-highlights="$highlights"
-                data-value="800"
+                data-value="0"
                 data-onready="setInterval( function() { Gauge.Collection.get('gauge1').setValue( document.getElementById('Speed').innerHTML);}, 1000);"
                 data-colors-plate= "#242424"
                         data-colors-majorTicks= "#f5f5f5"
