@@ -208,7 +208,9 @@ $(function() {
 function update() {
 	$('#hostsummary').load('refresh_hosts.php');
 }
-
+socket.onmessage = function(event) {
+  json = JSON.parse(event.data);
+  result.innerText = json.ticker.last.display;
 
 };
 </script>
