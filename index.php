@@ -209,9 +209,9 @@ function update() {
 	$('#hostsummary').load('refresh_hosts.php');
 }
 
-var result = document.querySelector('#result'),
-    socket = new WebSocket('ws://websocket.mtgox.com:80/mtgox?Channel=ticker'),
-    json;
+//var result = document.querySelector('#result'),
+//    socket = new WebSocket('ws://websocket.mtgox.com:80/mtgox?Channel=ticker'),
+//    json;
 
 socket.onmessage = function(event) {
   json = JSON.parse(event.data);
