@@ -75,16 +75,16 @@ ddsmoothmenu.init({
         <h3>MtGox USD/BTC</h3>
         <h2><span style="color:#242424" id="result"></span>
 <?php
-$LTC_BTC = GetJsonFeed("https://btc-e.com/api/2/ltc_btc/ticker");
-$LTC_BTC_HIGH = $LTC_BTC["ticker"]["high"];
-$LTC_BTC_LOW = $LTC_BTC["ticker"]["low"];
-$LTC_BTC_AVG = $LTC_BTC["ticker"]["avg"];
-$LTC_BTC_VOL = $LTC_BTC["ticker"]["vol"];
-$LTC_BTC_VOL_CUR = $LTC_BTC["ticker"]["vol_cur"];
-$LTC_BTC_LAST = $LTC_BTC["ticker"]["last"];
-$LTC_BTC_BUY = $LTC_BTC["ticker"]["buy"];
-$LTC_BTC_SELL = $LTC_BTC["ticker"]["sell"];
-echo $LTC_BTC_AVG;
+$LTC_USD = GetJsonFeed("https://btc-e.com/api/2/ltc_usd/ticker");
+$LTC_USD_HIGH = $LTC_USD["ticker"]["high"];
+$LTC_USD_LOW = $LTC_USD["ticker"]["low"];
+$LTC_USD_AVG = $LTC_USD["ticker"]["avg"];
+$LTC_USD_VOL = $LTC_USD["ticker"]["vol"];
+$LTC_USD_VOL_CUR = $LTC_USD["ticker"]["vol_cur"];
+$LTC_USD_LAST = $LTC_USD["ticker"]["last"];
+$LTC_USD_BUY = $LTC_USD["ticker"]["buy"];
+$LTC_USD_SELL = $LTC_USD["ticker"]["sell"];
+echo $LTC_USD_SELL;
 ?>
 </h2></div>
 
