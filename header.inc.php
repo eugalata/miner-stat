@@ -1,6 +1,5 @@
 <?php
 $pages = array("Home" => "index.php",
-             "Accounts" => "accounts.php",
              "Configure" => "config.php",
              "FAQ" => "faq.php");
 
