@@ -8,8 +8,8 @@ $group_totals = array('GRP_id' => 0, 'BTC_received' => 0, 'BTC_sent' => 0, 'BTC_
 $mtgox_currencys = array ('USD', 'GBP', 'EUR', 'AUD', 'CAD', 'CHF', 'CNY', 'DKK',
                           'HKD', 'JPY', 'NZD', 'PLN', 'RUB', 'SEK', 'SGD', 'THB');
 
-$mtgox_url = 'http://data.mtgox.com/api/1/';
-$mtgox_exchange_path = '/public/ticker';
+$mtgox_url = 'https://btc-e.com/api/2/';
+$mtgox_exchange_path = '/btc_usd/ticker';
 
 $blockchain_url = 'http://www.blockchain.info/';
 $blockchain_addr_options = '?format=json&limit=0';
