@@ -15,7 +15,7 @@ $blockchain_url = 'http://www.blockchain.info/';
 $blockchain_addr_options = '?format=json&limit=0';
 $blockchain_addr_path = 'address/';
 
-$exchange_rate = 0;
+$exchange_rate = 500;
 $currency_code = 'USD';
 
 $opts = array(
